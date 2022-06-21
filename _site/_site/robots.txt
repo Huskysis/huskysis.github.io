@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /contact.html
+
+Nada que ver aqui...
+
+Siga circulando.
+
