@@ -1,6 +1,8 @@
 ---
+subtitle: Mi Persona
+title2: Conoceme mejor
 layout: page
-title: About
+title: Acerca de Mi
 ---
 
-Something about me.
+Estoy pendiente en esto.

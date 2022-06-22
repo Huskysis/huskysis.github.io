@@ -1,8 +1,10 @@
 ---
+subtitle: Publicaciones
+title2: Exhibo lo que Aprendo
 layout: page
 title: Archive
 ---
-
+ 
 <section>
   {% if site.posts[0] %}
 

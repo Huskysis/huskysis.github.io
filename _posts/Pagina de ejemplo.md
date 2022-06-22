@@ -1,5 +1,7 @@
 ---
-title: One More Sample Page
+subtitle: esto va en la pestaña
+title2: esto va en el titulo de la cabezera
+title: Nombre del articulo
 published: true
 ---
 

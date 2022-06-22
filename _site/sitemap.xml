@@ -26,6 +26,9 @@
 <loc>http://localhost:8000/archive</loc>
 </url>
 <url>
+<loc>http://localhost:8000/atom</loc>
+</url>
+<url>
 <loc>http://localhost:8000/</loc>
 </url>
 <url>

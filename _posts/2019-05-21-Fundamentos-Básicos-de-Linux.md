@@ -1,18 +1,20 @@
 ---
 title: Fundamentos Básicos de Linux
+title2: Mi Conocimiento Básico de Linux
+subtitle: Si lo Básico
 published: true
 ---
 
 **Linux Arquitectura**
 
-El *Sistema Operativo(OS)* de Linux se puede dividir en ciertas **capas**:
+El **Sistema Operativo(OS)** de Linux se puede dividir en ciertas "*capas*":
 
-| Estructura     | Descripción                                                                                 |
+| **Estructura**     | **Descripción**                                                                                 |
 |:---------------|:--------------------------------------------------------------------------------------------|
-| Hardware       | Dispositivo periféricos, tales como la memoria RAM del sistema, dico duro, CPU, entre otros. |
-| Kernel         | El núcleo del sistema operativo Linux, cuya funciones es virtualizar y controlar los recursos comunes de Hardware, como la memoria asignada, acceso a datos, y otros. El kernel da a cada proceso con sus propios recursos virtuales y evita/mitiga los conflictos entre los diferentes procesos.|
-| Terminal(Shell)| Es una interfaz de linea de comandos(CLI, command-line interface), también conocido como **SHELL**, es una terminal que se puede introducir comandos a ejecutar. |
-| Utilidades del Sistema | El usuario tiene a disposición todas las funcionalidades del sistema operativo. |
+| **Hardware**       | Dispositivo periféricos, tales como la memoria RAM del sistema, dico duro, CPU, entre otros. |
+| **Kernel**         | El núcleo del sistema operativo Linux, cuya funciones es virtualizar y controlar los recursos comunes de Hardware, como la memoria asignada, acceso a datos, y otros. El kernel da a cada proceso con sus propios recursos virtuales y evita/mitiga los conflictos entre los diferentes procesos.|
+| **Terminal(Shell)**| Es una interfaz de linea de comandos(CLI, command-line interface), también conocido como **SHELL**, es una terminal que se puede introducir comandos a ejecutar. |
+| **Utilidades del Sistema** | El usuario tiene a disposición todas las funcionalidades del sistema operativo. |
 
 
 * * *

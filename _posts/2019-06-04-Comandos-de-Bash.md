@@ -1,4 +1,6 @@
 ---
+subtitle: Muchos Comandos
+title2: Mis Conocimientos de Bash
 title: Comandos de Bash
 published: true
 ---
