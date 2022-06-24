@@ -1,0 +1,401 @@
+I"�H<h3 id="pequeño-resumen-de-bash"><strong>Pequeño resumen de Bash</strong></h3>
+
+<blockquote>
+  <p>El nombre <strong>Bash</strong> (del Inglés <em>Bourne-Again-SHell</em>) es un tipo de Terminal que interpreta líneas de comando que lée. ejecuta e interpreta de forma estandar la salida de la información del archivo o el conjunto que se vaya a programar.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Todo sera mi interpretación de Bash. Se puede informar más escribiendo en su terminal " man bash ".
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="opciones"><strong>OPCIONES</strong></h3>
+
+<p>Todas las siguientes Abreviaturas son acompañadas por su descripción y un ejemplo.<br />
+  Para invocar desde la Terminal la <strong>Bash</strong> se debe escribir <code class="language-plaintext highlighter-rouge">Bash</code>.<br />
+  En adición las siguientes <em>Opciones</em> son interpretadas especificando el prefijo <code class="language-plaintext highlighter-rouge">Bash ..</code> seguido con las siguientes opciones:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-c</code></td>
+      <td>Este Comando es interpretado de forma que el argumento que no sea una opción sea una cadena comando. Me explico, usando <code class="language-plaintext highlighter-rouge">bash -c $comando</code> es invocar <em>Bash</em> seguido de ejecutar el comando en <strong>$comando</strong>.  Ejemplo: <code class="language-plaintext highlighter-rouge">bash -c ls</code> invoca <em>Bash</em> y sigue con el comando <em>ls</em> que lista lo que haya en la ruta actual.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-i</code></td>
+      <td>Entra en modo interactivo en la Terminal. Ejemplo: <code class="language-plaintext highlighter-rouge">bash -i</code>  *<em>invoca la terminal bash</em>*.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-l</code></td>
+      <td>Es como un metodo de inicio seción pero con una Terminal. Ejemplo: <code class="language-plaintext highlighter-rouge">bash -l</code> *<em>entra en una sesión como un usuario</em>*</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-r</code></td>
+      <td>Invoca la Terminal de forma <strong>Limitada</strong> y lo ejecuta en un ambiente controlado. Ejemplo <code class="language-plaintext highlighter-rouge">bash -r</code> <em>solo se tendra acceso a ciertos comandos</em></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-s</code></td>
+      <td>La Terminal se inicia de forma Estandar si no se le adjunto ningún argumento. Ejemplo <code class="language-plaintext highlighter-rouge">bash -s</code> *<em>se inicio la terminal</em>*</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-de-ayuda"><strong>COMANDOS DE AYUDA</strong></h3>
+
+<p>Los siguientes Comandos se pueden ejecutar acompañados o solos(tambíen se le puede adjuntar el parametro “–help o -h” para ver la ayuda o guia del programa):</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">man</code></td>
+      <td>Muestra la utilidad/es, instrucciones y su uso del comando a solicitar. Ejemplo: <code class="language-plaintext highlighter-rouge">man bash</code> <em>(no todos disponen del mismo)</em>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">info</code></td>
+      <td>Da información del comando indicado. Ejemplo: <code class="language-plaintext highlighter-rouge">info ls</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">help</code></td>
+      <td>Se puede ejecutar en casi cualquier ámbito, provee algunos comandos a ejecutar.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">whatis</code></td>
+      <td>Provee una breve descripción de los comandos. Ejemplo <code class="language-plaintext highlighter-rouge">whatis mkdir</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-para-archivos-o-directorios"><strong>COMANDOS PARA ARCHIVOS O DIRECTORIOS</strong></h3>
+
+<p>Los siguientes Comandos se ejecutan en cualquier ámbito desde una Terminal:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">echo</code></td>
+      <td>Reporta en la Terminal lo que escribias</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls</code></td>
+      <td>Lista el contenido actual, o si le asignas una dirección te lo muestra. Ejemplo: <code class="language-plaintext highlighter-rouge">ls /home</code> , lista el contenido de la carpeta /home.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cd</code></td>
+      <td>En una Terminal, te mueves entre directorios. Ejemplo: <code class="language-plaintext highlighter-rouge">cd ~/Desktop</code> , te mueves al Escritorio propio.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pwd</code></td>
+      <td>Muestra la ruta actual en la que te ubicas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tree</code></td>
+      <td>Muesrta en forma de ramificación las rutas disponibles y sus archivos.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mkdir</code></td>
+      <td>Crea un directorio seguido de su nombre. Ejemplo: <code class="language-plaintext highlighter-rouge">mkdir "Nueva Carpeta"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rmdir</code></td>
+      <td>Borra un directorio(este debe de estar vacio). Ejemplo: <code class="language-plaintext highlighter-rouge">rmdir "Nueva Carpeta"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">touch</code></td>
+      <td>Crea un archivo. Ejemplo: <code class="language-plaintext highlighter-rouge">touch archivo.txt</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cp</code></td>
+      <td>Copia un archivo asignandole el archivo y hacia donde pega la copia. Ejemplo: <code class="language-plaintext highlighter-rouge">cp archivo.txt ~/Desktop</code> , copia el <em>archivo.txt</em> y lo pega en el escritorio.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">file</code></td>
+      <td>Te muestra los detalles del archivo.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cat</code></td>
+      <td>Leé y muestra el contenido del archivo asignado. Ejemplo: <code class="language-plaintext highlighter-rouge">cat archivo.txt</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mv</code></td>
+      <td>Mueve el archivo asignado hacia una ubicación. Ejemplo: <code class="language-plaintext highlighter-rouge">mv archivo.txt ~/Download</code> , muevo el <em>archivo.txt</em> a Descargas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">rm</code></td>
+      <td>Elimina el archivo o directorio asignado. Ejemplo: <code class="language-plaintext highlighter-rouge">rm archivo.txt</code> , en caso del directorio  <code class="language-plaintext highlighter-rouge">rm -d</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sort</code></td>
+      <td>Muestra de forma ordenada alfabeticamente el contenido de un archivo asignado.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">more</code></td>
+      <td>Leé y lo muestra en formato Página a Página el archivo asignado.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">less</code></td>
+      <td>Leé y muestra el contenido del archio desde el inicio.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">split</code></td>
+      <td>Divide el archivo y le asigna <em>aa</em> al final. Ejemplo: <code class="language-plaintext highlighter-rouge">split archivo.txt</code> se crea el mismo archivo pero con el nombre “xaa”</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find</code></td>
+      <td>Busca archivos asignados. Ejemplo: <code class="language-plaintext highlighter-rouge">find archivo.txt</code> localiza el archivo y te muestra su dirección.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">locate</code></td>
+      <td>Busca directorios asignados y muestra su contenido. Ejemplo: <code class="language-plaintext highlighter-rouge">locate ~</code> busca en el directorio de usuarios.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">updatedb</code></td>
+      <td>Actualiza la lista de archivo o programas instalados.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">whereis</code></td>
+      <td>Muestra la ruta de un archivo en especifico. Ejemplo: <code class="language-plaintext highlighter-rouge">whereis archivo.txt</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">wc</code></td>
+      <td>Muestra el número total de líneas, palabras y caracteres que contiene el archivo asignado.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep</code></td>
+      <td>Busca por el texto que se le indique acompañado de un archivo. Ejemplo: <code class="language-plaintext highlighter-rouge">cat /etc/passwd | grep root</code>, en ese archivo busca la palabra <em>root</em>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">head</code></td>
+      <td>Muestra las primeras 10 líneas que contiene el archivo.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tail</code></td>
+      <td>Muestra las ultimas 10 líneas que contiene el archivo</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tr</code></td>
+      <td>Reemplaza caracteres que se ven en el archivo. Ejemplo: <code class="language-plaintext highlighter-rouge">cat archivo.txt | tr -d "algo"</code> quita “algo” que muestre en consola el archivo, su contenido no se altera.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ln</code></td>
+      <td>Crea un enlace entre de un archivo. Ejemplo: <code class="language-plaintext highlighter-rouge">ln archio.txt archivo2.txt</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">diff</code></td>
+      <td>Muestra diferencias entre dos archivo. Ejemplo: <code class="language-plaintext highlighter-rouge">diff archivo.txt archivo2.txt</code> el primer archivo se representa como “&lt;” y el segundo con “&gt;”.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">chmod</code></td>
+      <td>Permite darle o quitarle los <em>permisos</em> que se puede hacer o no de un archivo o directorio. Ejemplo: <code class="language-plaintext highlighter-rouge">chmod +x archivo.txt</code> , el <em>archivo.txt</em> tiene permiso de ejecución.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">chown</code></td>
+      <td>Permite cambiar de propietario el archivo o directorio. Ejemplo: <code class="language-plaintext highlighter-rouge">chown usuario:usuario archivo.txt</code> , el <em>usuario</em> es propietario del archivo.txt.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">chgrp</code></td>
+      <td>Cambia de grupos del usuario. Ejemplo: <code class="language-plaintext highlighter-rouge">chgrp grupo archivo.txt</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vi</code></td>
+      <td>Abre un editor de texto.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">nano</code></td>
+      <td>Abre un editor de texto</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-de-gestión-de-procesos"><strong>COMANDOS DE GESTIÓN DE PROCESOS</strong></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">top</code></td>
+      <td>Muestra todos los procesos que se estan ejecutando.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ps</code></td>
+      <td>Muestra los procesos actuales.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">kill</code></td>
+      <td>Termina un proceso por su PID(Control Proporcional Integral Derivativo), se puede ver mediante el comando <code class="language-plaintext highlighter-rouge">top</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">time</code></td>
+      <td>Mide el tiempo que tarda el proceso en ejecutarse.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bg</code></td>
+      <td>Pone en segunda plano el proceso.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fg</code></td>
+      <td>Trae a primer plano un proceso detenido en segundo plano.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&amp;</code></td>
+      <td>Colocado al final de la línea de un comando,lo ejecuta en segundo plano.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-para-gestión-del-sistema"><strong>COMANDOS PARA GESTIÓN DEL SISTEMA</strong></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">exit</code></td>
+      <td>Cierra la Terminal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">logout</code></td>
+      <td>Cierra la sesión de la Terminal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">history</code></td>
+      <td>Muestra los comandos ejecutados por el usuario.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">uname</code></td>
+      <td>Da información del sistema operativo.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tee</code></td>
+      <td>Copia la entrada estándar a la salida estándar a un archivo.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hostname</code></td>
+      <td>Muestra el nombre del servidor.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">date</code></td>
+      <td>Muestra la fecha y hora actual.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">clear</code></td>
+      <td>Borra las líneas de texto que quedaron escritas en la Terminal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">env</code></td>
+      <td>Muestra las variables del entorno.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">export</code></td>
+      <td>Permite el uso de variables por programas en todos los caminos del usuario.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">uptime</code></td>
+      <td>Muestra el tiempo transcurrido desde que se encendio la máquina.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-para-la-gestión-de-usuarios"><strong>COMANDOS PARA LA GESTIÓN DE USUARIOS</strong></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adduser / useradd</code></td>
+      <td>Agrega un nuevo usuario.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">userdel</code></td>
+      <td>Borra un usuario.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">passwd</code></td>
+      <td>Cambia la contraseña.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">whoami</code></td>
+      <td>Muestra el nombre de usuario acutal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">id</code></td>
+      <td>Muestra indentificadores del usuario.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">w</code></td>
+      <td>Muestra detalles de los usuarios actuales.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">addgroup / groupadd</code></td>
+      <td>Agrega un nuevo grupo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-para-acceso-remoto"><strong>COMANDOS PARA ACCESO REMOTO</strong></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ssh</code></td>
+      <td>Permite conectarte de forma remota a otra máquina mediante una Terminal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ftp</code></td>
+      <td>Permite conectarte mediante el protocolo FTP(File Transfer Protocol, o Protocolo de Transferencia de Archivos).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">telnet</code></td>
+      <td>Permite la conexión a un equipo o máquina de forma remota.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-de-red"><strong>COMANDOS DE RED</strong></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ping</code></td>
+      <td>Indica si hay respuesta por parte del servidor.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ifconfig</code></td>
+      <td>Muestra la configuración del dispositivo de red.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">nmap</code></td>
+      <td>Es una herramienta que escanea la red y muestra los puertos que se encuentran disponibles, la descripción y su versión del mismo entre otras funciones.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="comandos-para-apagar-o-reiniciar-el-sistema"><strong>COMANDOS PARA APAGAR O REINICIAR EL SISTEMA</strong></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">shutdown / halt / poweroff</code></td>
+      <td>Apaga el sistema.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">reboot</code></td>
+      <td>Reinicia el sistema.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+:ET

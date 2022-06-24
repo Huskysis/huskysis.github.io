@@ -1,0 +1,167 @@
+I"�<hr />
+
+<h3 id="pequeño-resumen-de-qué-es-linux"><strong>Pequeño Resumen de ¿Qué es Linux?</strong></h3>
+
+<blockquote>
+  <p>Linux es un sistema operativo como Windows, iOS, Android o macOS. Un sistema operativo es un software que administra todos los recursos de hardware asociados con nuestra computadora. Eso significa que un sistema operativo gestiona toda la comunicación entre el software y el hardware. Además, existen muchas distribuciones diferentes (distro). Es como una versión de los sistemas operativos Windows.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="filosofía-de-linux"><strong>Filosofía de Linux</strong></h3>
+
+<p>Linux sigue cinco principios básicos:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Principios</strong></td>
+      <td><strong>Descripción</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Todo es un archivos</td>
+      <td>Todos los archivos de configuración para los diversos servicios que se ejecutan en Linux se almacenan en uno o más archivos de texto.</td>
+    </tr>
+    <tr>
+      <td>Programas pequeños y de un solo proposito</td>
+      <td>Muchas herramientas se pueden combinar para que trabajen juntas.</td>
+    </tr>
+    <tr>
+      <td>Evita las interfaz de usuario cautivas</td>
+      <td>La integración y combinación de diferentes herramientas nos permite llevar a cabo muchas tareas grandes y complejas, como procesar o filtrar resultados de datos específicos.</td>
+    </tr>
+    <tr>
+      <td>Los datos de configuración se almacenan en un archivo de texto</td>
+      <td>Un claro ejemplo es el archivo ubicado en <strong>/etc/passwd</strong> que tiene todos los usuarios registrados en el equipo.</td>
+    </tr>
+    <tr>
+      <td>Capacidad de encadenar programas para realizar tareas complejas</td>
+      <td>La integración y combinación de diferentes herramientas permite llevar a cabo muchas tareas grandes y complejas, como procesar o filtrar resultados de datos específicos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="arquitectura-de-linux"><strong>Arquitectura de Linux</strong></h3>
+
+<p>El <strong>Sistema Operativo(OS)</strong> de Linux se puede dividir en ciertas “<em>capas</em>”:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Estructura</strong></td>
+      <td><strong>Descripción</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Hardware</strong></td>
+      <td>Dispositivo periféricos, tales como la memoria RAM del sistema, dico duro, CPU, entre otros.</td>
+    </tr>
+    <tr>
+      <td><strong>Kernel</strong></td>
+      <td>El núcleo del sistema operativo Linux, cuya funciones es virtualizar y controlar los recursos comunes de Hardware, como la memoria asignada, acceso a datos, y otros. El kernel da a cada proceso con sus propios recursos virtuales y evita/mitiga los conflictos entre los diferentes procesos.</td>
+    </tr>
+    <tr>
+      <td><strong>Terminal(Shell)</strong></td>
+      <td>Es una interfaz de linea de comandos(CLI, command-line interface), también conocido como <strong>SHELL</strong>, es una terminal que se puede introducir comandos a ejecutar.</td>
+    </tr>
+    <tr>
+      <td><strong>Utilidades del Sistema</strong></td>
+      <td>El usuario tiene a disposición todas las funcionalidades del sistema operativo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="terminal-o-shell"><strong>Terminal o Shell</strong></h3>
+
+<blockquote>
+  <p>Una terminal de Linux, también llamada shell o línea de comandos, proporciona una interfaz de entrada/salida basada en texto entre los usuarios y el kernel para un sistema informático. El término consola también es típico pero no se refiere a una ventana sino a una pantalla en modo texto. En la ventana de terminal, se pueden ejecutar comandos para controlar el sistema.</p>
+</blockquote>
+
+<blockquote>
+  <p>La Terminal o Shell más utilizado en Linux es el <a href="/Comandos-de-Bash">Bourne-Again Shell(BASH)</a> y es parte del proyecto GNU. Todo lo que hacemos a través de la GUI lo podemos hacer con el shell. El shell nos brinda muchas más posibilidades de interactuar con programas y procesos para obtener información más rápido. Además, muchos procesos se pueden automatizar fácilmente con scripts más pequeños o más grandes que facilitan mucho el trabajo manual.</p>
+  <hr />
+</blockquote>
+
+<h3 id="jerarquía-del-sistema-de-archivos"><strong>Jerarquía del sistema de archivos</strong></h3>
+
+<p>La Estructura del <em>sistema de archivo</em> o <em>Raiz</em> es una Jerarquía de tipo árbol, que se diferencian entre:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/</code></td>
+      <td>Raiz de base o Principio del sistema que contiene los archivos necesarios para arrancar el sistema operativo.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/bin</code></td>
+      <td>Contiene comandos de binarios escenciales</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/boot</code></td>
+      <td>Consiste en el estandar Bootloader, kernel ejecutable y los archivos necesario para arrancar el sistema operativo de Linux.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/dev</code></td>
+      <td>Contiene los archivos de un dispositivo para facilitar el acceso a todos dispositivos de hardware conectados al sistema.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/etc</code></td>
+      <td>Sistema local de archivos de configuración. Los archivos de configuración de las aplicaciones instaladas pueden ser guardados aquí.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/home</code></td>
+      <td>Cada usuario del sistema tiene su propio subdirectorio para el almacenamiento.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/lib</code></td>
+      <td>Archivos de las biblotecas compartidas que son necesarias para le arranque del sistema.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/media</code></td>
+      <td>Dispositivos externos de medios extraibles, como unidades USB se montan en este directorio.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/mnt</code></td>
+      <td>Punto de montaje temporal para regular los sistemas de fichos.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/opt</code></td>
+      <td>Directorio de archivos, tales como herramientas de terceros.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/root</code></td>
+      <td>El directorio es del usuario <em>root</em> que es el que controla y permite el manejo del sistema.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/sbin</code></td>
+      <td>Este directorio contiene los archivos ejecutables que se utiliza para la administración del sistema.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/tmp</code></td>
+      <td>Se puede escribir, leer y ejecutar en este directorio de forma temporal. Este directorio es generalmente despejado en el arranque del sistema y pueden ser eliminados en otros momentos. sin ninguna advertencia.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/usr</code></td>
+      <td>Contiene los archivos ejecutables, biblotecas, manual de archivos, entre otros.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">var</code></td>
+      <td>Este directorio contiene los archivos de datos variables tales como archivos de registro de correo electrónico, aplicaciones web relacionadas con los archivos, y otros más.</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

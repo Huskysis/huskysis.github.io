@@ -2,47 +2,28 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <meta name="generator" content="Jekyll">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="icon" href="/../assets/h.png">
+ 
   <title>Si lo Básico</title>
 
-  <link rel="stylesheet" href="/css/main.css">
-  
-  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Fundamentos Básicos de Linux | Simple Blog del Husky</title>
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Fundamentos Básicos de Linux" />
-<meta name="author" content="Huskysis" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Linux Arquitectura" />
-<meta property="og:description" content="Linux Arquitectura" />
-<link rel="canonical" href="http://localhost:8000/Fundamentos-B%C3%A1sicos-de-Linux" />
-<meta property="og:url" content="http://localhost:8000/Fundamentos-B%C3%A1sicos-de-Linux" />
-<meta property="og:site_name" content="Simple Blog del Husky" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-05-21T00:00:00+00:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Fundamentos Básicos de Linux" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Huskysis","url":"https://huskysis.github.io/"},"dateModified":"2019-05-21T00:00:00+00:00","datePublished":"2019-05-21T00:00:00+00:00","description":"Linux Arquitectura","headline":"Fundamentos Básicos de Linux","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8000/Fundamentos-B%C3%A1sicos-de-Linux"},"url":"http://localhost:8000/Fundamentos-B%C3%A1sicos-de-Linux"}</script>
-<!-- End Jekyll SEO tag -->
-
+  <link rel="stylesheet" href="/../css/main.css"> 
 </head>
 
 
-<body>
-  <div id="wrapper">
+<div id="wrapper">
     <header>
   <div>
     <a href="/">
-      
       <h1>Mi Conocimiento Básico de Linux</h1>
     </a>
     <div class="header-links">
-      <a href="/archive"><h2 class="header-link">Articulos Publicados</h2></a>
+      <a href="/archive"><h2 class="header-link">Artículos</h2></a>
+<a href="/terceros"><h2 class="header-link">Tercero</h2></a>
 <a href="/about"><h2 class="header-link">Acerca de mi</h2></a>
-<a href="/atom.xml"><h2 class="header-link">Proyectos</h2></a>
+<a href="/atom"><h2 class="header-link">Proyectos</h2></a>
+
 
     </div>
   </div>
@@ -53,40 +34,108 @@
         <article>
   <h2>Fundamentos Básicos de Linux</h2>
   <time datetime="2019-05-21T00:00:00+00:00" class="by-line">21 May 2019</time>
-  <p><strong>Linux Arquitectura</strong></p>
+  <hr />
 
-<p>El <strong>Sistema Operativo(OS)</strong> de Linux se puede dividir en ciertas “<em>capas</em>”:</p>
+<h3 id="pequeño-resumen-de-qué-es-linux"><strong>Pequeño Resumen de ¿Qué es Linux?</strong></h3>
+
+<blockquote>
+  <p>Linux es un sistema operativo como Windows, iOS, Android o macOS. Un sistema operativo es un software que administra todos los recursos de hardware asociados con nuestra computadora. Eso significa que un sistema operativo gestiona toda la comunicación entre el software y el hardware. Además, existen muchas distribuciones diferentes (distro). Es como una versión de los sistemas operativos Windows.</p>
+</blockquote>
+
+<blockquote>
+  <p>En general, Linux se considera más seguro que otros sistemas operativos y, si bien ha tenido muchas vulnerabilidades del kernel en el pasado, cada vez es menos frecuente. Es menos susceptible al malware que los sistemas operativos Windows y se actualiza con mucha frecuencia. Linux también es muy estable y, en general, ofrece un rendimiento muy alto para el usuario final. Sin embargo, puede ser más difícil para los principiantes y no tiene tantos controladores de hardware como Windows.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="filosofía-de-linux"><strong>Filosofía de Linux</strong></h3>
+
+<p>Linux sigue cinco principios básicos:</p>
 
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: left"><strong>Estructura</strong></th>
-      <th style="text-align: left"><strong>Descripción</strong></th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><strong>Hardware</strong></td>
-      <td style="text-align: left">Dispositivo periféricos, tales como la memoria RAM del sistema, dico duro, CPU, entre otros.</td>
+      <td><strong>Principios</strong></td>
+      <td><strong>Descripción</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Todo es un archivos</td>
+      <td>Todos los archivos de configuración para los diversos servicios que se ejecutan en Linux se almacenan en uno o más archivos de texto.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><strong>Kernel</strong></td>
-      <td style="text-align: left">El núcleo del sistema operativo Linux, cuya funciones es virtualizar y controlar los recursos comunes de Hardware, como la memoria asignada, acceso a datos, y otros. El kernel da a cada proceso con sus propios recursos virtuales y evita/mitiga los conflictos entre los diferentes procesos.</td>
+      <td>Programas pequeños y de un solo proposito</td>
+      <td>Muchas herramientas se pueden combinar para que trabajen juntas.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><strong>Terminal(Shell)</strong></td>
-      <td style="text-align: left">Es una interfaz de linea de comandos(CLI, command-line interface), también conocido como <strong>SHELL</strong>, es una terminal que se puede introducir comandos a ejecutar.</td>
+      <td>Evita las interfaz de usuario cautivas</td>
+      <td>La integración y combinación de diferentes herramientas nos permite llevar a cabo muchas tareas grandes y complejas, como procesar o filtrar resultados de datos específicos.</td>
     </tr>
     <tr>
-      <td style="text-align: left"><strong>Utilidades del Sistema</strong></td>
-      <td style="text-align: left">El usuario tiene a disposición todas las funcionalidades del sistema operativo.</td>
+      <td>Los datos de configuración se almacenan en un archivo de texto</td>
+      <td>Un claro ejemplo es el archivo ubicado en <strong>/etc/passwd</strong> que tiene todos los usuarios registrados en el equipo.</td>
+    </tr>
+    <tr>
+      <td>Capacidad de encadenar programas para realizar tareas complejas</td>
+      <td>La integración y combinación de diferentes herramientas permite llevar a cabo muchas tareas grandes y complejas, como procesar o filtrar resultados de datos específicos.</td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<p><strong>Jerarquía del sistema de archivos</strong></p>
+<h3 id="arquitectura-de-linux"><strong>Arquitectura de Linux</strong></h3>
+
+<p>El <strong>Sistema Operativo(OS)</strong> de Linux se puede dividir en ciertas “<em>capas</em>”:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Estructura</strong></td>
+      <td><strong>Descripción</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Hardware</strong></td>
+      <td>Dispositivo periféricos, tales como la memoria RAM del sistema, dico duro, CPU, entre otros.</td>
+    </tr>
+    <tr>
+      <td><strong>Kernel</strong></td>
+      <td>El núcleo del sistema operativo Linux, cuya funciones es virtualizar y controlar los recursos comunes de Hardware, como la memoria asignada, acceso a datos, y otros. El kernel da a cada proceso con sus propios recursos virtuales y evita/mitiga los conflictos entre los diferentes procesos.</td>
+    </tr>
+    <tr>
+      <td><strong>Terminal(Shell)</strong></td>
+      <td>Es una interfaz de linea de comandos(CLI, command-line interface), también conocido como <strong>SHELL</strong>, es una terminal que se puede introducir comandos a ejecutar.</td>
+    </tr>
+    <tr>
+      <td><strong>Utilidades del Sistema</strong></td>
+      <td>El usuario tiene a disposición todas las funcionalidades del sistema operativo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="terminal-o-shell"><strong>Terminal o Shell</strong></h3>
+
+<blockquote>
+  <p>Una terminal de Linux, también llamada shell o línea de comandos, proporciona una interfaz de entrada/salida basada en texto entre los usuarios y el kernel para un sistema informático. El término consola también es típico pero no se refiere a una ventana sino a una pantalla en modo texto. En la ventana de terminal, se pueden ejecutar comandos para controlar el sistema.</p>
+</blockquote>
+
+<blockquote>
+  <p>La Terminal o Shell más utilizado en Linux es el <a href="/Comandos-de-Bash">Bourne-Again Shell(BASH)</a> y es parte del proyecto GNU. Todo lo que hacemos a través de la GUI lo podemos hacer con el shell. El shell nos brinda muchas más posibilidades de interactuar con programas y procesos para obtener información más rápido. Además, muchos procesos se pueden automatizar fácilmente con scripts más pequeños o más grandes que facilitan mucho el trabajo manual.</p>
+  <hr />
+</blockquote>
+
+<h3 id="jerarquía-del-sistema-de-archivos"><strong>Jerarquía del sistema de archivos</strong></h3>
 
 <p>La Estructura del <em>sistema de archivo</em> o <em>Raiz</em> es una Jerarquía de tipo árbol, que se diferencian entre:</p>
 
@@ -130,7 +179,7 @@
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">/opt</code></td>
-      <td>Directorio de archivos, tales como herraminetas de terceros.</td>
+      <td>Directorio de archivos, tales como herramientas de terceros.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">/root</code></td>
@@ -162,9 +211,8 @@
   </div>
 
    <footer>
-  <!--a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US"-->
     <span>
-        <b>El Husky</b>
+        <b>Husky</b>
     </span>
     
     <span>© 2019</span>

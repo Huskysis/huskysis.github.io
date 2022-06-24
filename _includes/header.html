@@ -1,8 +1,7 @@
 <header>
   <div>
     <a href="/">
-      {% assign owner_first_name = site.owner | split: " " %}
-      <h1>{%if page.title2 %}{{ page.title2 }}{% else %}{{ site.title2 }}{% endif %}</h1>
+      <h1>{{ page.title2 }}</h1>
     </a>
     <div class="header-links">
       {% include links.html %}

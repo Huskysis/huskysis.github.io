@@ -1,16 +1,16 @@
 title: Simple Blog del Husky
-description: "A Jekyll Blog Theme For Hackers"
+description: "Consciente, de momento..."
 author: 
   name: "Huskysis"
-  email: "sth_ws@hotmail.com" #"someone@somewebsite.somedomain"
-  url: "https://huskysis.github.io/" #"https://ashishchaudhary.in/hacker-blog"
+  email: "sth_ws@hotmail.com" 
+  url: "https://huskysis.github.io"
 
 baseurl: /
 
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 3
+paginate: 4
 paginate_path: /page/:num/
 
 defaults:

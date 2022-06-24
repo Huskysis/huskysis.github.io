@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:8000/Pag%C3%ADna-de-Prueba</loc>
+<lastmod>1999-12-31T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:8000/Fundamentos-B%C3%A1sicos-de-Linux</loc>
 <lastmod>2019-05-21T00:00:00+00:00</lastmod>
 </url>
@@ -26,10 +30,10 @@
 <loc>http://localhost:8000/archive</loc>
 </url>
 <url>
-<loc>http://localhost:8000/atom</loc>
+<loc>http://localhost:8000/</loc>
 </url>
 <url>
-<loc>http://localhost:8000/</loc>
+<loc>http://localhost:8000/terceros</loc>
 </url>
 <url>
 <loc>http://localhost:8000/page/2/</loc>

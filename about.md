@@ -5,4 +5,4 @@ layout: page
 title: Acerca de Mi
 ---
 
-Estoy pendiente en esto.
+**W.I.P.**
