@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  {% if paginator.total_pages > 1 %}
+  <!--{% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page == 1 %}
     <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&laquo;</a>
@@ -31,7 +31,7 @@
     <span class="page-item">&raquo;</span>
     {% endif %}
   </div>
-  {% endif %} {% include footer.html %}
+  {% endif %}--> {% include footer.html %}
 
   {% if site.google_analytics %}
     {% include analytics.html %}

@@ -1,0 +1,225 @@
+I"4<h2 id="reconocimiento-de-syntaxis-y-su-funcionalidad"><strong>Reconocimiento de Syntaxis y su Funcionalidad</strong></h2>
+
+<p>Primero es lo primero, saber como es una Syntaxis en Bash. Empezaremos con las báscias funcionalidad descriptivas para sabes donde se almacena las variables, los condicionales, entre otros.
+Existen</p>
+
+<blockquote>
+  <p>Terminologías y Ejemplos:</p>
+  <blockquote>
+    <p>El Simbolo <strong>$</strong> representa el comando a ejecutar en la Terminal.</p>
+  </blockquote>
+</blockquote>
+
+<pre><code class="language-herramientas"> [User@Linux]$ echo "Hola y esto es una prueba."
+  Hola y esto es una prueba.
+</code></pre>
+
+<blockquote>
+  <p>Para hacer que un nombre, comandos o algo relacionado te lo represente se usa las Variables, es <strong>“algo”=”esto”</strong>(ahora la palabra <strong>“$algo”</strong> tiene almacenado <strong>“esto”</strong>), se interprete la variable almacenada con <strong>$</strong> seguido por su interprete “<strong>algo</strong>”.</p>
+</blockquote>
+
+<blockquote>
+  <p>Los Númerales <strong>#</strong> son comentarios y no se ejecutan en el proceso.</p>
+</blockquote>
+
+<pre><code class="language-herramientas"># La Variable es "Nombre" y "Huskysis" es su contenido.
+ [User@Linux]$ Nombre=Huskysis
+ [User@Linux]$ echo $Nombre
+  Huskysis
+
+# Tambíen se le asigna un comando en "$( )"
+ [User@Linux]$ echo $(comando)
+ [User@Linux]$ echo $(pwd) Algo
+  /home/usuario/Desktop Algo
+</code></pre>
+
+<blockquote>
+  <p>Para almacenar la salida redirigir el flujo del programa ya sea dependiendo de su estado final sea exitoso o erroneo se usa <strong>&gt;</strong>(Mayor que) o <strong>»</strong> para agregarlo al archivo sin sustituir todo el contenido, ya que <strong>&gt;</strong> sustituye todo el conetnido por la salida del comando.</p>
+</blockquote>
+
+<pre><code class="language-herramientas"># Se almacena integro al archivo.
+ [User@Linux]$ echo "Prueba" &gt; Archivo.txt
+ [User@Linux]$ cat Archivo.txt
+  Prueba
+
+# Se coloca al final de la línea y asi con las siguientes entrantes.
+ [User@Linux]$ echo "Otra Prueba" &gt;&gt; Archivo.txt
+ [User@Linux]$ cat Archivo.txt
+  Prueba
+  Otra Prueba
+</code></pre>
+
+<blockquote>
+  <p>Para redirigir las salidas en su formato exitoso(el mensaje se envió y obtuvo una respuesta) o no exitoso(el mensaje se envió y no obtuvo una respuesta o un inconveniente al momento de reportarlo en la terminal o ejecutarlo) a un archivo se usa <strong>1&gt;</strong>(stout 1) para la salida que da una respuesta exitosa, en cambio <strong>2&gt;</strong>(stdrr 2) para la salida de una respuesta no exitosa.</p>
+</blockquote>
+
+<pre><code class="language-herramientas"># Salida no exitosa
+  [User@Linux]$ ls /root 
+  ls: no se puede abrir el directorio '/root': Permiso denegado
+  
+  [User@Linux]$ ls /root 2&gt; Error
+  [User@Linux]$ cat Error
+  ls: no se puede abrir el directorio '/root': Permiso denegado
+
+# Salida exitosa
+  [User@Linux]$ ls /home
+  /usuario
+  
+  [User@Linux]$ ls /home 1&gt; Normal
+  [User@Linux]$ cat Normal
+  /usuario
+
+# Para la Salida Exitosa y No Existosa
+  [User@Linux]$ls /root /home
+  /home:
+  usuario
+  ls: no se puede abrir el directorio '/root': Permiso denegado
+
+  [User@Linux]$ ls /root /home &amp;&gt; Ambos
+  [User@Linux]$ cat Ambos
+  /home:
+  husky
+  ls: no se puede abrir el directorio '/root': Permiso denegado
+</code></pre>
+
+<blockquote>
+  <p>Para hacer una secuencia se pueden lograr de muchas formas, pero me voy a limitar con usar el formato con <strong>echo</strong>.</p>
+</blockquote>
+
+<pre><code class="language-herramientas"># Se utilizan las llaves "{ }" para indicar posible contenido. 
+# Se utilizan los dos puntos ".." para indicar que sigua la secuencia.
+ [User@Linux]$ echo {1..5}
+  1 2 3 4 5
+
+ [User@Linux]$ echo {a..f}
+  a b c d f
+  
+ [User@Linux]$ echo {A..D}.txt
+  A.txt B.txt C.txt D.txt
+</code></pre>
+<hr />
+
+<h2 id="parametros-expansivos"><strong>Parametros Expansivos</strong></h2>
+
+<blockquote>
+  <p>Las siguientes representaciones serán dentro de un archivo.sh(la extención .sh da a enteder que es un archivo de comandos de Bash).</p>
+</blockquote>
+
+<h2 id="bucle"><strong>Bucle</strong></h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/usr/bin/env bash</span>
+
+<span class="c"># Bucle normal.</span>
+  <span class="k">for </span>h <span class="k">in</span> /etc/p<span class="k">*</span><span class="p">;</span><span class="k">do 
+    </span><span class="nb">echo</span> <span class="nv">$h</span>
+  <span class="k">done</span>
+
+<span class="c"># Bucle tipo C.</span>
+  <span class="k">for</span> <span class="o">((</span> f <span class="o">=</span> 0 <span class="p">;</span> f &lt; 100 <span class="p">;</span> f++ <span class="o">))</span><span class="p">;</span><span class="k">do
+    </span><span class="nb">echo</span> <span class="nv">$f</span>
+  <span class="k">done</span>
+
+<span class="c"># Bucle rangos.</span>
+  <span class="k">for </span>b <span class="k">in</span> <span class="o">{</span>1..5<span class="o">}</span><span class="p">;</span><span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"Número </span><span class="nv">$b</span><span class="s2">"</span>
+  <span class="k">done</span>
+
+<span class="c"># Bucle rangos por tramos.</span>
+ <span class="k">for </span>v <span class="k">in</span> <span class="o">{</span>0..50..5<span class="o">}</span><span class="p">;</span><span class="k">do
+   </span><span class="nb">echo</span> <span class="s2">"Número </span><span class="nv">$v</span><span class="s2">"</span>
+  <span class="k">done</span>
+
+<span class="c"># Bucle leyendo líneas.</span>
+ <span class="nb">cat </span>file.txt | <span class="k">while </span><span class="nb">read </span>line<span class="p">;</span><span class="k">do
+   </span><span class="nb">echo</span> <span class="nv">$line</span>
+  <span class="k">done</span>
+
+<span class="c"># Bucle infinito.</span>
+ <span class="k">while </span><span class="nb">true</span><span class="p">;</span><span class="k">do
+   </span><span class="nb">echo</span> <span class="s2">"Prueba"</span>
+  <span class="k">done</span>
+</code></pre></div></div>
+
+<h2 id="funciones"><strong>Funciones</strong></h2>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Definiendo Funciones.</span>
+<span class="c"># La palabra "algo" sin el "=" queda como $1 y si hay cambia el orden del número con la variable.</span>
+  <span class="k">function </span>algo<span class="o">()</span> <span class="o">{</span>
+      <span class="nb">echo</span> <span class="s2">"Esto </span><span class="nv">$1</span><span class="s2">"</span>
+    <span class="o">}</span>
+algo <span class="s2">"es una prueba"</span>
+
+<span class="c"># Reportes de Errores. </span>
+<span class="c"># Comando con salida exitosa (return 0).</span>
+<span class="c"># Comando con salida no exitoso (return 1).</span>
+  CualquierCosa<span class="o">(){</span>
+      <span class="k">return </span>1
+    <span class="o">}</span>
+  <span class="k">if </span>CualquierCosa<span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Correcto"</span>
+  <span class="k">else
+    </span><span class="nb">echo</span> <span class="s2">"Erroneo"</span>
+  <span class="k">fi</span>
+</code></pre></div></div>
+
+<h2 id="condicionales"><strong>Condicionales</strong></h2>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Tenga en cuenta que "[[" es en realidad un comando o programa que devuelve 0(verdadedo) o 1(falso).</span>
+ <span class="o">[[</span> <span class="nt">-z</span> CADENA <span class="o">]]</span>         <span class="c"># Cadena vacia.</span>
+ <span class="o">[[</span> <span class="nt">-n</span> CADENA <span class="o">]]</span>         <span class="c"># Cadena no vacia.</span>
+ <span class="o">[[</span> CADENA <span class="o">==</span> CADENA <span class="o">]]</span>  <span class="c"># Son iguales.</span>
+ <span class="o">[[</span> CADENA <span class="o">!=</span> CADENA <span class="o">]]</span>  <span class="c"># No son iguales.</span>
+ <span class="o">[[</span> Núm <span class="nt">-eq</span> Núm <span class="o">]]</span>       <span class="c"># Son iguales.</span>
+ <span class="o">[[</span> Núm <span class="nt">-ne</span> Núm <span class="o">]]</span>       <span class="c"># No son iguales.</span>
+ <span class="o">[[</span> Núm <span class="nt">-lt</span> Núm <span class="o">]]</span>       <span class="c"># Menos que eso.</span>
+ <span class="o">[[</span> Núm <span class="nt">-le</span> Núm <span class="o">]]</span>       <span class="c"># Menos o igual a eso.</span>
+ <span class="o">[[</span> Núm <span class="nt">-gt</span> Núm <span class="o">]]</span>       <span class="c"># Mayor que eso.</span>
+ <span class="o">[[</span> Núm <span class="nt">-ge</span> Núm <span class="o">]]</span>       <span class="c"># Mayor o igual a eso.</span>
+ <span class="o">[[</span> CADENA <span class="o">=</span>~ CADENA <span class="o">]]</span>  <span class="c"># Expresioes regulares(Regex).</span>
+ <span class="o">((</span> Núm &lt; Núm <span class="o">))</span>         <span class="c"># Números condicionales.</span>
+
+<span class="c"># Archivos Condicionales</span>
+  <span class="o">[[</span> <span class="nt">-e</span> ARCHIVO <span class="o">]]</span>           <span class="c"># Existe.</span>
+  <span class="o">[[</span> <span class="nt">-r</span> ARCHIVO <span class="o">]]</span>           <span class="c"># Leible.</span>
+  <span class="o">[[</span> <span class="nt">-h</span> ARCHIVO <span class="o">]]</span>           <span class="c"># Enlace Simbolico.</span>
+  <span class="o">[[</span> <span class="nt">-d</span> ARCHIVO <span class="o">]]</span>           <span class="c"># Directorio.</span>
+  <span class="o">[[</span> <span class="nt">-w</span> ARCHIVO <span class="o">]]</span>           <span class="c"># Escribible.</span>
+  <span class="o">[[</span> <span class="nt">-s</span> ARCHIVO <span class="o">]]</span>           <span class="c"># Si el tamaño es &gt;(mayor que) 0 bytes.</span>
+  <span class="o">[[</span> <span class="nt">-f</span> ARCHIVO <span class="o">]]</span>           <span class="c"># El archivo.</span>
+  <span class="o">[[</span> <span class="nt">-x</span> ARCHIVO <span class="o">]]</span>           <span class="c"># Ejecutable.</span>
+  <span class="o">[[</span> ARCHIVO1 <span class="nt">-ef</span> ARCHIOV2 <span class="o">]]</span><span class="c"># Mismo archivo.</span>
+  <span class="o">[[</span> ARCHIVO1 <span class="nt">-nt</span> ARCHIVO2 <span class="o">]]</span><span class="c"># El 1 es mas reciente que 2.</span>
+  <span class="o">[[</span> ARCHIVO1 <span class="nt">-ot</span> ARCHIVO2 <span class="o">]]</span><span class="c"># El 2 es mas reciente que 1.</span>
+
+<span class="c"># Ejemplos</span>
+<span class="c"># La variable "$Caja" no esta asignada, por ende,"Esta vacio"</span>
+  <span class="k">if</span> <span class="o">[[</span> <span class="nt">-z</span> <span class="nv">$Caja</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+     </span><span class="nb">echo</span> <span class="s2">"Esta vacio"</span>
+   <span class="k">elif</span> <span class="o">[[</span> <span class="nt">-n</span> <span class="nv">$Caja</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+     </span><span class="nb">echo</span> <span class="s2">"No esta vacio"</span>
+   <span class="k">else
+     </span><span class="nb">echo</span> <span class="s2">"Error"</span>
+  <span class="k">fi</span>
+
+<span class="c"># Regex  </span>
+  <span class="k">if</span> <span class="o">[[</span> <span class="s2">"A"</span> <span class="o">=</span>~ <span class="o">!</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Esto es Regex"</span>
+  <span class="k">elif</span> <span class="o">[[</span> <span class="s2">"A"</span> <span class="o">=</span>~ <span class="o">!</span> <span class="o">]]</span><span class="p">;</span><span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Esto no es Regex"</span>
+  <span class="k">fi</span>
+
+<span class="c"># Números condicionales</span>
+  <span class="k">if</span> <span class="o">((</span> 1 &lt; 2<span class="o">))</span><span class="p">;</span><span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"1 es menos que 2"</span>
+  <span class="k">elif</span> <span class="o">((</span> 1 <span class="o">&gt;</span> 2 <span class="o">))</span><span class="p">;</span><span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"2 es mayor que 1"</span>
+  <span class="k">fi</span> 
+
+<span class="c"># Archivo</span>
+  <span class="k">if</span> <span class="o">[[</span> <span class="nt">-e</span> <span class="s2">"archivo.txt"</span> <span class="o">]]</span><span class="p">;</span><span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"El archivo existe"</span>
+  <span class="k">else
+    </span><span class="nb">echo</span> <span class="s2">"El archivo no existe"</span>
+  <span class="k">fi</span>
+</code></pre></div></div>
+
+:ET

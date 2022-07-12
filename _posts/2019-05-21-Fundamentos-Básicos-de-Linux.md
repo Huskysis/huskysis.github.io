@@ -14,6 +14,11 @@ published: true
 
 * * *
 
+### **Representasión de Envío, Entrada y Salida**
+
+Los comandos en Linux tienen una entrada estándar (stdin 0) y dos salidas estándar: una para la salida normal del comando (stdout 1) y otra para la salida de los mensajes de error (stderr 2), por defecto la entrada como las salidas se muestran en la terminal del usuario, sin embargo al usar un operador de redirección podemos lograr que en lugar de usar la terminal se utilice un fichero. Puedes ver como ocurre [aqui](Script-en-Bash).
+
+* * *
 ### **Filosofía de Linux**
 
   Linux sigue cinco principios básicos:
@@ -67,6 +72,6 @@ La Estructura del *sistema de archivo* o *Raiz* es una Jerarquía de tipo árbol
 |`/sbin`| Este directorio contiene los archivos ejecutables que se utiliza para la administración del sistema. |
 |`/tmp`| Se puede escribir, leer y ejecutar en este directorio de forma temporal. Este directorio es generalmente despejado en el arranque del sistema y pueden ser eliminados en otros momentos. sin ninguna advertencia. |
 |`/usr`| Contiene los archivos ejecutables, biblotecas, manual de archivos, entre otros. |
-|`var`| Este directorio contiene los archivos de datos variables tales como archivos de registro de correo electrónico, aplicaciones web relacionadas con los archivos, y otros más. |
+|`/var`| Este directorio contiene los archivos de datos variables tales como archivos de registro de correo electrónico, aplicaciones web relacionadas con los archivos, y otros más. |
 
 

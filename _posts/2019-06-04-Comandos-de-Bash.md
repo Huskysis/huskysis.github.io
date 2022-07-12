@@ -10,8 +10,11 @@ published: true
 
 > El nombre **Bash** (del Inglés *Bourne-Again-SHell*) es un tipo de Terminal que interpreta líneas de comando que lée. ejecuta e interpreta de forma estandar la salida de la información del archivo o el conjunto que se vaya a programar.
 
+> Bash es una herramienta versátil para realizar diversas tareas, lo que en algunos casos le permite evitar la instalación de software especializado. Al mismo tiempo, es un lenguaje de programación de secuencias de comandos que le permite crear cadenas de comandos para automatizar varias operaciones. 
+
+
 ```
-Todo sera mi interpretación de Bash. Se puede informar más escribiendo en su terminal " man bash ".
+Todo sera mi interpretación de Bash.  Se puede informar más escribiendo en su terminal " man bash ".
 ```
 
 --- 
@@ -22,11 +25,11 @@ Todo sera mi interpretación de Bash. Se puede informar más escribiendo en su t
   Para invocar desde la Terminal la **Bash** se debe escribir `Bash`.  
   En adición las siguientes *Opciones* son interpretadas especificando el prefijo `Bash ..` seguido con las siguientes opciones:  
   
-|`-c`| Este Comando es interpretado de forma que el argumento que no sea una opción sea una cadena comando. Me explico, usando `bash -c $comando` es invocar *Bash* seguido de ejecutar el comando en **$comando**.  Ejemplo: `bash -c ls` invoca *Bash* y sigue con el comando *ls* que lista lo que haya en la ruta actual. |
-|`-i`| Entra en modo interactivo en la Terminal. Ejemplo: `bash -i`  \**invoca la terminal bash*\*.|
-|`-l`| Es como un metodo de inicio seción pero con una Terminal. Ejemplo: `bash -l` \**entra en una sesión como un usuario*\* |
-|`-r`| Invoca la Terminal de forma **Limitada** y lo ejecuta en un ambiente controlado. Ejemplo `bash -r` *solo se tendra acceso a ciertos comandos* |
-|`-s`| La Terminal se inicia de forma Estandar si no se le adjunto ningún argumento. Ejemplo `bash -s` \**se inicio la terminal*\* |
+| `"-c"` | Este Comando es interpretado de forma que el argumento que no sea una opción sea una cadena comando. Me explico, usando `bash -c $comando` es invocar *Bash* seguido de ejecutar el comando en **$comando**.  Ejemplo: `bash -c ls` invoca *Bash* y sigue con el comando *ls* que lista lo que haya en la ruta actual. |
+| `"-i"` | Entra en modo interactivo en la Terminal. Ejemplo: `bash -i`  \**invoca la terminal bash*\*.|
+| `"-l"` | Es como un metodo de inicio seción pero con una Terminal. Ejemplo: `bash -l` \**entra en una sesión como un usuario*\*. |
+| `"-r"` | Invoca la Terminal de forma **Limitada** y lo ejecuta en un ambiente controlado. Ejemplo `bash -r` *solo se tendra acceso a ciertos comandos*. |
+| `"-s"` | La Terminal se inicia de forma Estandar si no se le adjunto ningún argumento. Ejemplo `bash -s` \**se inicio la terminal*\*. |
 
 ---
 
@@ -58,6 +61,7 @@ Todo sera mi interpretación de Bash. Se puede informar más escribiendo en su t
 |`cat`| Leé y muestra el contenido del archivo asignado. Ejemplo: `cat archivo.txt` |
 |`mv`| Mueve el archivo asignado hacia una ubicación. Ejemplo: `mv archivo.txt ~/Download` , muevo el *archivo.txt* a Descargas. |
 |`rm`| Elimina el archivo o directorio asignado. Ejemplo: `rm archivo.txt` , en caso del directorio  `rm -d` |
+|`shred`| Elimina el archivo de forma casi permanente. |
 |`sort`| Muestra de forma ordenada alfabeticamente el contenido de un archivo asignado. |
 |`more`| Leé y lo muestra en formato Página a Página el archivo asignado. |
 |`less`| Leé y muestra el contenido del archio desde el inicio. |
@@ -67,7 +71,7 @@ Todo sera mi interpretación de Bash. Se puede informar más escribiendo en su t
 |`updatedb`| Actualiza la lista de archivo o programas instalados. |
 |`whereis`| Muestra la ruta de un archivo en especifico. Ejemplo: `whereis archivo.txt`. |
 |`wc`| Muestra el número total de líneas, palabras y caracteres que contiene el archivo asignado. |
-|`grep`| Busca por el texto que se le indique acompañado de un archivo. Ejemplo: `cat /etc/passwd | grep root`, en ese archivo busca la palabra *root*. |
+|`grep`| Busca por el texto que se le indique acompañado de un archivo. Ejemplo: `grep 'root' /etc/passwd`, en ese archivo busca la palabra *root*. |
 |`head`| Muestra las primeras 10 líneas que contiene el archivo. |
 |`tail`| Muestra las ultimas 10 líneas que contiene el archivo |
 |`tr`| Reemplaza caracteres que se ven en el archivo. Ejemplo: `cat archivo.txt | tr -d "algo"` quita "algo" que muestre en consola el archivo, su contenido no se altera. |
@@ -144,4 +148,5 @@ Todo sera mi interpretación de Bash. Se puede informar más escribiendo en su t
 
 ---
 
+Sí entendiste todo, vamos a la sección de [Scripting en Bash](Script-en-Bash)
 
