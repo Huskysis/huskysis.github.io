@@ -34,8 +34,8 @@ Como para omitirselo,¿No?...
 2.  [Enumeración Básica](#enum)
 
 3.  [Explotación](#exploit)
-  *   [Viendo que se esconde en el Puerto 8080](#puerto 8080)
-  *   [Accediendo al panel de administrador](#puerto 80)
+  *   [Viendo que se esconde en el Puerto 8080](#puerto-8080)
+  *   [Accediendo al panel de administrador](#puerto-80)
 
 4.  [Escalada de Privilegio](#priv)
   *   [Rocket.chat](#rocket.chat)
@@ -118,7 +118,7 @@ Mirando la página vemos una seccion de personal y podemos ver sus respectivos c
 <img src="/assets/images/htb/talkative/talkative5.png" style="display: block; margin-left: auto; margin-right: auto; width: 60%;"/>
 
 
-## Página del puerto 8080 [+](#puerto 8080) {#puerto 8080}
+## Página del puerto 8080 [+](#puerto 8080) {#puerto-8080}
 
 En el puerto 8080 es un <a href="https://caminosaleatorios.wordpress.com/2019/01/09/acerca-de-jamovi/" terget="_blank">Jamovi</a>, si buscamos qué es, es un tipo excel o hoja de cálculo, con un modulo instalado de Rj Editor
 
@@ -185,7 +185,7 @@ bZ89h}V<S_DA
 ```
 
 
-## Accediendo al panel de Adminsitrador [+](#puerto 80) {puerot 80}
+## Accediendo al panel de Adminsitrador [+](#puerto 80) {puerot-80}
 
 Recordando que en el puerto 80 hay un panel de autenticación podemos probar primero los usuarios y contraseñas pero nos toma las credenciales como incorrecta, buscando credenciales por defecto, logramos dar con el usuario *'admin@talkative.htb'*
 
